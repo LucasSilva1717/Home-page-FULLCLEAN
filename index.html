@@ -18,140 +18,681 @@
 
         <ul class="flex items-center gap-12 font-medium text-xl text-gray-700">
             <li><a href="#inicio" class="hover:text-cor-principal transition-colors">Início</a></li>
-            <li><a href="#servicos" class="hover:text-cor-principal transition-colors">Serviços</a></li>
+            <li class="relative py-2 group">
+
+                <a id="dropdown-btn" href="#servicos"
+                    class="flex items-center gap-1 hover:text-cor-principal transition-colors select-none cursor-pointer text-gray-700 font-medium text-xl">
+                    Serviços
+
+                    <svg id="dropdown-arrow" class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+
+                <ul id="dropdown-menu"
+                    class="hidden group-hover:block absolute left-0 top-full -mt-2 pt-2 w-72 bg-transparent z-50 font-normal text-base text-gray-700">
+
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden">
+                        <li>
+                            <a href="#higienizacao"
+                                class="block px-5 py-3 hover:bg-gray-50 hover:text-cor-principal transition-colors">
+                                Higienização de Estofados
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#impermeabilizacao"
+                                class="block px-5 py-3 hover:bg-gray-50 hover:text-cor-principal transition-colors">
+                                Impermeabilização de Estofados
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#colchoes"
+                                class="block px-5 py-3 hover:bg-gray-50 hover:text-cor-principal transition-colors">
+                                Limpeza de Colchões
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
             <li><a href="#sobre" class="hover:text-cor-principal transition-colors">Sobre</a></li>
             <li><a href="#solicite" class="hover:text-cor-principal transition-colors">Solicite seu orçamento</a></li>
             <li><a href="#contato" class="hover:text-cor-principal transition-colors">Contato</a></li>
         </ul>
     </nav>
 
-    <section id="inicio" class="pt-24 min-h-screen bg-cover bg-center bg-no-repeat flex items-center px-16 relative"
+    <section id="inicio"
+        class="pt-24 min-h-screen bg-cover bg-center bg-no-repeat flex items-center px-6 md:px-16 relative overflow-hidden"
         style="background-image: url('./Assets/IMG/estofado.png');">
 
-        <div class="relative z-10 max-w-xl flex flex-col gap-6">
-            <h1 class="text-4xl md:text-5xl font-extrabold uppercase tracking-wide leading-tight text-sub">
-                Proporcione o ambiente <br>
+        <div class="relative z-10 max-w-xl flex flex-col gap-8">
+
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter leading-[1.05] text-[#1E3E62]">
+                Ambiente <br>
                 <span class="text-cor-principal">seguro e saudável</span> <br>
-                que sua família merece
+                para sua família.
             </h1>
 
-            <a href="#sobre"
-                class="w-fit bg-cor-principal hover:bg-sub text-white font-semibold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all text-center text-base">
-                Solicite um Orçamento
-            </a>
+            <ul class="space-y-4 max-w-sm">
+                <li
+                    class="flex items-center gap-4 p-4 bg-white/50 border border-white/30 rounded-xl shadow-sm backdrop-blur-sm">
+                    <span class="text-[#729A38] text-xl">✔️</span>
+                    <span class="text-gray-800 font-medium text-sm">Proteção avançada que prolonga a vida útil dos seus
+                        estofados.</span>
+                </li>
+
+                <li
+                    class="flex items-center gap-4 p-4 bg-white/50 border border-white/30 rounded-xl shadow-sm backdrop-blur-sm">
+                    <span class="text-[#729A38] text-xl">✔️</span>
+                    <span class="text-gray-800 font-medium text-sm">Serviço domiciliar ágil com setup silencioso e zero
+                        resíduos.</span>
+                </li>
+
+                <li
+                    class="flex items-center gap-4 p-4 bg-white/50 border border-white/30 rounded-xl shadow-sm backdrop-blur-sm">
+                    <span class="text-[#729A38] text-xl">✔️</span>
+                    <span class="text-gray-800 font-medium text-sm">Tratamento premium, seguro para tecidos delicados e
+                        fibras nobres.</span>
+                </li>
+            </ul>
+
+            <div class="flex">
+                <a href="#sobre"
+                    class="bg-cor-principal hover:bg-sub text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center text-base uppercase tracking-widest">
+                    Solicitar Orçamento
+                </a>
+            </div>
         </div>
-        <div class="absolute -bottom-10 right-0 h-[85vh] flex items-end">
-            <img src="Assets/IMG/Banner.png" class="h-full w-auto object-contain object-bottom" alt="banner">
+
+        <div
+            class="absolute -bottom-8 right-30 h-[80vh] flex items-end hidden md:flex drop-shadow-2xl pointer-events-none">
+            <img src="Assets/IMG/Banner.png" class="h-[90%] w-auto object-contain object-bottom" alt="banner">
         </div>
     </section>
+    <section id="servicos" class="bg-gray-50 py-30 px-6 md:px-16 flex flex-col items-center justify-center font-sans">
 
-    <section id="servicos"
-        class="bg-page-primaria pt-24 min-h-screen bg-cover bg-center bg-no-repeat flex items-center px-16 relative justify-center">
-        <div class="w-full bg-branco py-10 rounded-2xl px-4 flex flex-col items-center font-sans">
+        <div class="text-center mb-16 max-w-2xl">
+            <span class="text-[#729A38] font-bold uppercase tracking-widest text-sm">Nossas Especialidades</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-[#1E3E62] tracking-tighter mt-3 mb-5">
+                Soluções Completas em <span class="text-[#729A38]">Higienização</span>
+            </h2>
+            <p class="text-gray-500 text-lg leading-relaxed">
+                Profissionais qualificados e produtos homologados pela ANVISA para eliminar a sujeira profunda do seu
+                lar e do seu veículo.
+            </p>
+        </div>
 
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#1E3E62] tracking-wide">
-                    Nossos <span class="text-[#729A38]">Serviços</span>
-                </h2>
+        <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+            <div
+                class="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-52 overflow-hidden">
+                        <img src="Assets/IMG/limpeza-sofa.jpg" alt="Higienização de Estofados"
+                            class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-[#1E3E62] mb-5 tracking-tight">Estofados Residenciais</h3>
+
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">🛋️</span>
+                                <div><strong class="text-[#1E3E62]">Sofás e Poltronas:</strong> Remoção de manchas,
+                                    encardidos e oleosidade corporal.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">🪑</span>
+                                <div><strong class="text-[#1E3E62]">Cadeiras e Puffs:</strong> Limpeza profunda para
+                                    assentos de tecidos e camurça.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">🛏️</span>
+                                <div><strong class="text-[#1E3E62]">Cabeceiras de Cama:</strong> Purificação e
+                                    eliminação de poeira acumulada na fibra.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="px-8 pb-8">
+                    <a href="#higienizacao"
+                        class="inline-flex items-center gap-2 text-[#729A38] font-bold hover:text-[#5f822e] transition-colors group text-sm uppercase tracking-wider">
+                        Saiba mais
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
-
-                <div class="flex flex-col bg-[#0F3057] rounded-xl overflow-hidden shadow-md">
-
-                    <div class="h-64 overflow-hidden">
-                        <img src="Assets/IMG/limpeza-sofa.jpg" alt="Higienização de Estofados Full Clean"
-                            class="w-full h-full object-cover">
+            <div
+                class="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-52 overflow-hidden">
+                        <img src="Assets/IMG/banco-auto.jpg" alt="Higienização Automotiva"
+                            class="w-full h-full object-cover object-center">
                     </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-[#1E3E62] mb-5 tracking-tight">Estofados Automotivos</h3>
 
-                    <div class="pt-6 px-6 pb-0 text-center flex-1 flex flex-col justify-between">
-                        <div class="mb-6">
-                            <h3 class="text-3xl font-bold text-branco pb-3 mb-4">
-                                <span class="text-cor-principal">Higienização</span> de<br>Estofados
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed">
-                                A Higienização de Estofados da Full Clean é altamente indicada para todos os tipos de
-                                estofados. Nosso processo especializado elimina profundamente sujidades, ácaros, fungos
-                                e bactérias, restaurando o aspecto renovado, o conforto e a biossegurança do seu tecido.
-                            </p>
-                        </div>
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">🚗</span>
+                                <div><strong class="text-[#1E3E62]">Bancos de Carros:</strong> Limpeza completa para
+                                    estofados de tecido e hidratação.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">🧼</span>
+                                <div><strong class="text-[#1E3E62]">Remoção de Odores:</strong> Neutralização de cheiro
+                                    de cigarro, mofo e umidade.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">✨</span>
+                                <div><strong class="text-[#1E3E62]">Revitalização Interna:</strong> Restaura o padrão
+                                    estético de veículo novo.</div>
+                            </li>
+                        </ul>
                     </div>
-
-                    <a href="#"
-                        class="w-full py-4 bg-[#729A38] hover:bg-[#5f822e] text-white font-bold text-sm tracking-wider text-center block transition-colors duration-200">
-                        SAIBA MAIS
-                    </a>
-
                 </div>
 
-                <div class="flex flex-col bg-[#0F3057] rounded-xl overflow-hidden shadow-md">
-
-                    <div class="h-64 overflow-hidden">
-                        <img src="Assets/IMG/imp-sofa.png" alt="Impermeabilização de Estofados Full Clean"
-                            class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="pt-6 px-6 pb-0 text-center flex-1 flex flex-col justify-between">
-                        <div class="mb-6">
-                            <h3 class="text-3xl font-bold text-branco pb-3 mb-4">
-                                <span class="text-cor-principal">Impermeabilização</span> de<br>Estofados
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed">
-                                A Impermeabilização Avançada da Full Clean protege seu estofado contra o derramamento
-                                acidental de líquidos e a penetração de substâncias pastosas. O procedimento utiliza
-                                tecnologia de ponta com composição não inflamável e totalmente homologada pela ANVISA,
-                                preservando a textura original.
-                            </p>
-                        </div>
-                    </div>
-
-                    <a href="#"
-                        class="w-full py-4 bg-[#729A38] hover:bg-[#5f822e] text-white font-bold text-sm tracking-wider text-center block transition-colors duration-200">
-                        SAIBA MAIS
+                <div class="px-8 pb-8">
+                    <a href="#higienizacao"
+                        class="inline-flex items-center gap-2 text-[#729A38] font-bold hover:text-[#5f822e] transition-colors group text-sm uppercase tracking-wider">
+                        saiba mais
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                        </svg>
                     </a>
+                </div>
+            </div>
 
+            <div
+                class="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-52 overflow-hidden">
+                        <img src="Assets/IMG/limp-colchao.png" alt="Limpeza de Colchões"
+                            class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-[#1E3E62] mb-5 tracking-tight">Limpeza de Colchões</h3>
+
+                        <ul class="space-y-4 text-gray-600 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">🔬</span>
+                                <div><strong class="text-[#1E3E62]">Combate Alergias:</strong> Extração profunda
+                                    eliminando ácaros e fungos.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">☀️</span>
+                                <div><strong class="text-[#1E3E62]">Manchas e Suor:</strong> Tratamento especial para
+                                    remover marcas amareladas.</div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#729A38] text-base">💤</span>
+                                <div><strong class="text-[#1E3E62]">Noites Saudáveis:</strong> Secagem semi-seca
+                                    otimizada para uso rápido.</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="flex flex-col bg-[#0F3057] rounded-xl overflow-hidden shadow-md">
-
-                    <div class="h-64 overflow-hidden">
-                        <img src="Assets/IMG/limp-colchao.png" alt="Limpeza de colchões Full Clean"
-                            class="w-full h-full object-cover">
-                    </div>
-
-                    <div class="pt-6 px-6 pb-0 text-center flex-1 flex flex-col justify-between">
-                        <div class="mb-6">
-                            <h3 class="text-3xl font-bold text-branco pb-3 mb-4">
-                                <span class="text-cor-principal">Limpeza</span> de<br> Colchões
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed">
-                                Seu colchão requer cuidados rigorosos e especializados. Através de equipamentos com alta
-                                capacidade de sucção e extração, a Full Clean erradica microrganismos nocivos à saúde
-                                respiratória. Uma solução indispensável para a sua qualidade de vida, recomendada
-                                anualmente.
-                            </p>
-                        </div>
-                    </div>
-
-                    <a href="#"
-                        class="w-full py-4 bg-[#729A38] hover:bg-[#5f822e] text-white font-bold text-sm tracking-wider text-center block transition-colors duration-200">
-                        SAIBA MAIS
+                <div class="px-8 pb-8">
+                    <a href="#sobre-colchoes"
+                        class="inline-flex items-center gap-2 text-[#729A38] font-bold hover:text-[#5f822e] transition-colors group text-sm uppercase tracking-wider">
+                        saiba mais
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                        </svg>
                     </a>
-
                 </div>
+            </div>
+
+        </div>
     </section>
-    <div class="w-full bg-page-primaria relative z-10 -mb-1">
+
+
+    <section id="higienizacao"
+        class="bg-branco pt-5 min-h-screen bg-cover bg-center bg-no-repeat flex items-center px-16 relative justify-center">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full relative z-10">
+
+            <div class="relative w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl select-none group/slider">
+                <img src="Assets/IMG/antes-depois/sofa-depois.jpg" alt="Depois da higienização"
+                    class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+
+                <div id="before-image" class="absolute inset-0 w-full h-full pointer-events-none"
+                    style="clip-path: inset(0 50% 0 0);">
+                    <img src="Assets/IMG/antes-depois/sofa-antes.jpg" alt="Antes da higienização"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+                <input type="range" min="0" max="100" value="50" id="slider-input"
+                    class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+
+                <div id="slider-line" class="absolute top-0 bottom-0 w-1 bg-white z-20 pointer-events-none"
+                    style="left: 50%;">
+                    <div
+                        class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-cor-principal text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white text-xs font-bold font-mono">
+                        &lt;&gt;
+                    </div>
+                </div>
+
+                <span
+                    class="absolute top-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider z-20 pointer-events-none transition-opacity group-hover/slider:opacity-0">Antes</span>
+                <span
+                    class="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider z-20 pointer-events-none transition-opacity group-hover/slider:opacity-0">Depois</span>
+            </div>
+
+            <div class="text-left">
+                <span class="text-cor-principal font-bold uppercase tracking-wider text-sm">Serviço Especializado</span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-6">Higienização de Estofados</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    Eliminamos profundamente sujeiras, poeira, ácaros e bactérias do seu sofá ou poltrona. Utilizando
+                    maquinário profissional de extração e produtos biodegradáveis regulamentados pela ANVISA, devolvemos
+                    a cor original e o perfume do seu estofado sem agredir o tecido.
+                </p>
+                <ul class="space-y-3 mb-8 text-gray-700 font-medium">
+                    <li class="flex items-center gap-3"><span class="text-cor-principal">✔</span> Remoção de manchas e
+                        odores</li>
+                    <li class="flex items-center gap-3"><span class="text-cor-principal">✔</span> Secagem rápida e
+                        segura</li>
+                    <li class="flex items-center gap-3"><span class="text-cor-principal">✔</span> Eliminação de 99,9% de
+                        ácaros e fungos</li>
+                </ul>
+                <a href="#solicite-seu-orcamento"
+                    class="inline-block bg-cor-principal hover:bg-opacity-90 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Renovar Meu Estofado
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="sobre-estofados"
+        class="bg-gray-50 py-20 px-16 flex flex-col items-center justify-center relative min-h-[500px]">
+        <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <div>
+                <span class="text-cor-principal font-bold uppercase tracking-wider text-sm">Conforto e Renovação</span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-6">Por que a Higienização de Estofados é Essencial?
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                    O sofá é um dos locais onde sua família passa mais tempo, mas ele também atua como um verdadeiro imã
+                    de poeira, resíduos de alimentos, pelos de pets e descamação de pele. Com o tempo, essa mistura
+                    penetra no tecido, criando o ambiente perfeito para microrganismos.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Nosso sistema de extração profunda elimina de vez a sujeira pesada e os agentes alérgenos. Mais do
+                    que uma limpeza visual, é um cuidado essencial para purificar o ar da sua sala e proteger a saúde de
+                    quem você ama.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex gap-4 items-start bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div
+                        class="text-cor-principal font-bold text-2xl bg-cor-principal/10 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                        ✨
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Revitalização de Cor e Toque</h3>
+                        <p class="text-gray-500 text-sm">Removemos aquela camada cinzenta de poeira e oleosidade
+                            corporal que apaga a cor do tecido, devolvendo o toque macio e o aspecto original de
+                            fábrica.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div
+                        class="text-cor-principal font-bold text-2xl bg-cor-principal/10 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                        🦠
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Desinfecção de Alta Performance</h3>
+                        <p class="text-gray-500 text-sm">Aplicamos produtos sanitizantes com tecnologia bactericida que
+                            eliminam 99,9% de ácaros, fungos e bactérias sem agredir as fibras do tecido.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div
+                        class="text-cor-principal font-bold text-2xl bg-cor-principal/10 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                        💨
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Neutralização Absoluta de Odores</h3>
+                        <p class="text-gray-500 text-sm">Fórmulas bloqueadoras que agem na raiz do problema, eliminando
+                            cheiro de pets, mofo, umidade e urina, deixando um aroma suave de limpeza.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="galeria-higienizacao"
+        class="bg-branco py-20 px-16 flex flex-col items-center justify-center relative min-h-[600px]">
+
+        <div class="text-center mb-12 max-w-2xl">
+            <span class="text-cor-principal font-bold uppercase tracking-wider text-sm">Mais Resultados</span>
+            <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-4">Transformações Surpreendentes</h2>
+            <p class="text-gray-600 text-lg">
+                Veja outros estofados que renovamos completamente. Use as setas para navegar.
+            </p>
+        </div>
+
+        <div class="relative w-full max-w-5xl overflow-hidden px-4">
+
+            <div id="carousel-track"
+                class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-6 scrollbar-none"
+                style="scrollbar-width: none;">
+
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between">
+
+                    <div class="grid grid-cols-2 h-64 w-full">
+
+                        <div class="relative w-full h-full overflow-hidden">
+                            <img src="Assets/IMG/antes-depois/poltrona-antes.jpg" alt="Antes"
+                                class="w-full h-full object-cover object-center">
+                            <span
+                                class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded z-10">Antes</span>
+                        </div>
+
+                        <div class="relative w-full h-full overflow-hidden">
+                            <img src="Assets/IMG/antes-depois/poltrona-depois.jpg" alt="Depois"
+                                class="w-full h-full object-cover object-center">
+                            <span
+                                class="absolute bottom-2 right-2 bg-cor-principal text-white text-xs px-2 py-1 rounded z-10">Depois</span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-5 text-center bg-white border-t border-gray-50">
+                        <h3 class="font-bold text-gray-800 text-xl">Higienização e limpeza de poltronas</h3>
+                    </div>
+
+                </div>
+
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between">
+
+                    <div class="h-64 w-full overflow-hidden bg-gray-50 relative">
+                        <img src="Assets/IMG/antes-depois/banco-carro.JPG" alt="Antes e Depois Poltrona"
+                            class="w-full h-full object-cover object-center">
+
+                        <span
+                            class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded z-10">Antes</span>
+                        <span
+                            class="absolute bottom-2 right-2 bg-cor-principal text-white text-xs px-2 py-1 rounded z-10">Depois</span>
+                    </div>
+
+                    <div class="p-5 text-center bg-white border-t border-gray-50">
+                        <h3 class="font-bold text-gray-800 text-xl">Higienização e limpeza de bancos</h3>
+                    </div>
+
+                </div>
+
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between">
+
+                    <div class="grid grid-cols-2 h-64 w-full">
+
+                        <div class="relative w-full h-full overflow-hidden">
+                            <img src="Assets/IMG/antes-depois/sofa2-antes.jpg" alt="Antes"
+                                class="w-full h-full object-cover object-center">
+                            <span
+                                class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded z-10">Antes</span>
+                        </div>
+
+                        <div class="relative w-full h-full overflow-hidden">
+                            <img src="Assets/IMG/antes-depois/sofa2-depois.jpg" alt="Depois"
+                                class="w-full h-full object-cover object-center">
+                            <span
+                                class="absolute bottom-2 right-2 bg-cor-principal text-white text-xs px-2 py-1 rounded z-10">Depois</span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-5 text-center bg-white border-t border-gray-50">
+                        <h3 class="font-bold text-gray-800 text-xl">Higienização e limpeza de sofás</h3>
+                    </div>
+
+                </div>
+
+                <button id="carousel-prev"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center shadow-lg border border-gray-200 transition-all z-10">
+                    &#10094;
+                </button>
+                <button id="carousel-next"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center shadow-lg border border-gray-200 transition-all z-10">
+                    &#10095;
+                </button>
+            </div>
+    </section>
+
+    <div class="w-full bg-branco relative z-10 -mb-1">
         <svg class="w-full h-[6vw] min-h-[40px] max-h-[100px]" viewBox="0 0 1200 120" preserveAspectRatio="none"
             xmlns="http://w3.org">
             <path d="M0,0 L1200,90 L1200,120 L0,120 Z" fill="white"></path>
         </svg>
     </div>
-    <section id="Higienização"
-        class="bg-branco pt-24 min-h-screen bg-cover bg-center bg-no-repeat flex items-center px-16 relative justify-center">
 
     </section>
+    <section class="bg-[#0F3057] py-16 px-6 md:px-16 text-center relative overflow-hidden">
+        <div
+            class="absolute inset-0 opacity-10 bg-[radial-gradient(#729A38_1px,transparent_1px)] [background-size:16px_16px]">
+        </div>
 
+        <div class="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
+            <span class="text-[#729A38] font-bold uppercase tracking-widest text-xs mb-3">Pronto para transformar sua
+                casa?</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4 max-w-2xl leading-tight">
+                Mais que limpeza, entregamos <span class="text-[#729A38]">saúde e bem-estar</span> para o seu lar
+            </h2>
+            <p class="text-gray-300 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
+                Elimine as manchas e os micro-organismos invisíveis que afetam a sua família. Escolha o próximo ambiente
+                que deseja renovar.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+                <a href="#solicite-seu-orcamento"
+                    class="bg-[#729A38] hover:bg-[#5f822e] text-white font-bold px-8 py-3.5 rounded-xl transition-colors text-sm tracking-wider uppercase shadow-md">
+                    Falar no WhatsApp
+                </a>
+                <a href="#sobre-colchoes"
+                    class="border border-white/20 hover:border-white/40 text-white hover:bg-white/5 font-semibold px-8 py-3.5 rounded-xl transition-colors text-sm tracking-wider uppercase">
+                    Ver Linha de Colchões ↓
+                </a>
+            </div>
+        </div>
     </section>
+
+    <section id="resultado-impacto-colchao"
+        class="bg-white pt-30 pb-20 px-16 flex items-center justify-center relative min-h-[500px]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full relative z-10">
+
+            <div class="relative w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl select-none group/slider">
+                <img src="Assets/IMG/antes-depois/colchao-depois.jpg" alt="Depois"
+                    class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+
+                <div id="before-image-colchao" class="absolute inset-0 w-full h-full pointer-events-none"
+                    style="clip-path: inset(0 50% 0 0);">
+                    <img src="Assets/IMG/antes-depois/colchao-antes.jpg" alt="Antes"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+                <input type="range" min="0" max="100" value="50" id="slider-input-colchao"
+                    class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30">
+
+                <div id="slider-line-colchao" class="absolute top-0 bottom-0 w-1 bg-white z-20 pointer-events-none"
+                    style="left: 50%;">
+                    <div
+                        class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-cor-principal text-white rounded-full flex items-center justify-center shadow-lg border-2 border-white text-xs font-bold font-mono">
+                        &lt;&gt;
+                    </div>
+                </div>
+
+                <span
+                    class="absolute top-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider z-20 pointer-events-none transition-opacity group-hover/slider:opacity-0">Antes</span>
+                <span
+                    class="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider z-20 pointer-events-none transition-opacity group-hover/slider:opacity-0">Depois</span>
+            </div>
+
+            <div class="text-left">
+                <span class="text-cor-principal font-bold uppercase tracking-wider text-sm">Renovação Completa</span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-6">Limpeza de colchões</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    Não sofra mais com crises alérgicas ao se deitar. Nossa tecnologia de ponta alcança as camadas mais
+                    profundas do tecido, eliminando micro-organismos e resgatando a higiene original que sua saúde
+                    merece.
+                </p>
+                <ul class="space-y-3 mb-8 text-gray-700 font-medium">
+                    <li class="flex items-center gap-3"><span class="text-cor-principal">✔</span> Eliminação de milhões
+                        de ácaros e fungos profundos</li>
+                    <li class="flex items-center gap-3"><span class="text-cor-principal">✔</span> Remoção de manchas de
+                        suor e odores corporais</li>
+                    <li class="flex items-center gap-3"><span class="text-cor-principal">✔</span> Secagem rápida para
+                        usar na mesma noite</li>
+                </ul>
+                <a href="#solicite-seu-orcamento"
+                    class="inline-block bg-cor-principal hover:bg-opacity-90 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Renovar Meu Colchão
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <section id="sobre-colchoes"
+        class="bg-gray-50 py-20 px-16 flex flex-col items-center justify-center relative min-h-[500px]">
+        <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <div>
+                <span class="text-cor-principal font-bold uppercase tracking-wider text-sm">Saúde e Bem-Estar</span>
+                <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-6">Por que a Limpeza de Colchão é Vital?</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                    Um colchão sem higienização pode acumular milhões de ácaros, fungos e bactérias em poucos meses,
+                    alimentados pela descamação natural da nossa pele e pelo suor noturno.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Nosso processo de extração semi-seca com tecnologia bactericida remove essas impurezas das camadas
+                    mais profundas, sendo o maior aliado no combate a crises de rinite, asma e alergias respiratórias.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex gap-4 items-start bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div
+                        class="text-cor-principal font-bold text-2xl bg-cor-principal/10 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                        🔬
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Ação Bactericida Profunda</h3>
+                        <p class="text-gray-500 text-sm">Produtos profissionais que não apenas limpam a superfície, mas
+                            eliminam microrganismos invisíveis a olho nu dentro da espuma.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div
+                        class="text-cor-principal font-bold text-2xl bg-cor-principal/10 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                        ☕
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Remoção de Manchas e Odores</h3>
+                        <p class="text-gray-500 text-sm">Tratamento especial para remover manchas amareladas de suor,
+                            marcas do tempo e odores desagradáveis, devolvendo o aspecto de novo.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <div
+                        class="text-cor-principal font-bold text-2xl bg-cor-principal/10 w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
+                        💨
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg mb-1">Secagem Otimizada</h3>
+                        <p class="text-gray-500 text-sm">Utilizamos extratoras de alta potência que removem quase toda a
+                            umidade, permitindo uma secagem rápida para que você use a cama na mesma noite.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="galeria-colchao"
+        class="bg-branco py-20 px-16 flex flex-col items-center justify-center relative min-h-[600px]">
+
+        <div class="text-center mb-12 max-w-2xl">
+            <span class="text-cor-principal font-bold uppercase tracking-wider text-sm">Resultados Reais</span>
+            <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-4">Colchões Livres de Impurezas</h2>
+            <p class="text-gray-600 text-lg">
+                Veja a diferença visual da extração profunda de sujeira e manchas em nossos clientes.
+            </p>
+        </div>
+
+        <div class="relative w-full max-w-5xl overflow-hidden px-4">
+
+            <div id="carousel-track-colchao"
+                class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-6 scrollbar-none"
+                style="scrollbar-width: none;">
+
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="grid grid-cols-2 h-64">
+                        <div class="relative">
+                            <img src="Assets/IMG/antes-depois/colchao2-antes.jpg" alt="Antes"
+                                class="w-full h-full object-cover">
+                            <span
+                                class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Antes</span>
+                        </div>
+                        <div class="relative">
+                            <img src="Assets/IMG/antes-depois/colchao2-depois.jpg" alt="Depois"
+                                class="w-full h-full object-cover">
+                            <span
+                                class="absolute bottom-2 right-2 bg-cor-principal text-white text-xs px-2 py-1 rounded">Depois</span>
+                        </div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h3 class="font-bold text-gray-800 text-xl">Higienização de Colchão Casal</h3>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-none w-full md:w-[calc(50%-12px)] snap-start bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between">
+
+                    <div class="h-64 w-full overflow-hidden bg-gray-50 relative">
+                        <img src="Assets/IMG/antes-depois/colchao-mancha.png" alt="Antes e Depois Poltrona"
+                            class="w-full h-full object-cover object-center">
+
+                        <span
+                            class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded z-10">Antes</span>
+                        <span
+                            class="absolute bottom-2 right-2 bg-cor-principal text-white text-xs px-2 py-1 rounded z-10">Depois</span>
+                    </div>
+
+                    <div class="p-5 text-center bg-white border-t border-gray-50">
+                        <h3 class="font-bold text-gray-800 text-xl">Higienização e limpeza de bancos</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button id="carousel-prev-colchao"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center shadow-lg border border-gray-200 transition-all z-10">
+                &#10094;
+            </button>
+            <button id="carousel-next-colchao"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-12 h-12 rounded-full flex items-center justify-center shadow-lg border border-gray-200 transition-all z-10">
+                &#10095;
+            </button>
+        </div>
+    </section>
+    <script src="Assets/JS/main.js"></script>
 </body>
 
 </html>

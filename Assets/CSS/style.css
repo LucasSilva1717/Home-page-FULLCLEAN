@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme {
 
     --color-cor-principal: #7C9525;
@@ -10,9 +11,11 @@
     --color-branco: rgba(255, 255, 255, 0.8);
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: "Nunito", sans-serif;
 }
+
 p {
     font-family: "Comfortaa", sans-serif;
 }

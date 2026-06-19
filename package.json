@@ -1,9 +1,7 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.3.1",
-    "tailwindcss": "^4.3.1"
-  },
-  "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./Assets/CSS/style.css -o ./Assets/CSS/output.css --watch"
-  }
+  "name": "fullclean-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
 }

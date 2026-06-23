@@ -1,0 +1,10 @@
+# Dependências
+node_modules/
+apps/api/node_modules/
+
+# Builds
+dist/
+apps/api/dist/
+
+# Ambiente
+.env

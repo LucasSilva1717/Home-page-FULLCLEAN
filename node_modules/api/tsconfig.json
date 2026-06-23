@@ -3,13 +3,15 @@
     "target": "es2022",
     "module": "Node16",
     "moduleResolution": "Node16",
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
     "lib": ["es2022"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "test/**/*"]
 }

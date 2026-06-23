@@ -1,9 +1,11 @@
+import 'express-async-errors';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import { env } from './config/env';
 import { routes } from './routes';
 import { logger } from './config/logger';
+import { errorHandler } from './middlewares/error-handler';
 
 const app = express();
 
@@ -12,6 +14,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use(routes);
+
+app.use(errorHandler); 
 
 app.listen(env.PORT, () => {
   logger.info(`🚀 Servidor HTTP rodando perfeitamente na porta ${env.PORT}!`);

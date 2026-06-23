@@ -4,6 +4,10 @@
   "workspaces": [
     "apps/*"
   ],
+  "scripts": {
+    "build": "npm run build -w api",
+    "start": "node apps/api/dist/server.js"
+  },
   "devDependencies": {
     "@types/supertest": "^7.2.0",
     "supertest": "^7.2.2",

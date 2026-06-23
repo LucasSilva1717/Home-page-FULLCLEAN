@@ -24,8 +24,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./apps/api
 
       - name: Run tests
-        run: npx vitest run
-        working-directory: ./apps/api
+        run: npm run test -w apps/api

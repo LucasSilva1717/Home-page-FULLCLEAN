@@ -10,7 +10,10 @@ import { errorHandler } from './middlewares/error-handler';
 const app = express();
 
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 app.use(express.json());
 
 app.use(routes);

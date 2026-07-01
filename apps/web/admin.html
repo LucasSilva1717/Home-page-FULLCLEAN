@@ -95,7 +95,14 @@
   </main>
 
   <script>
-    const API_URL = 'http://localhost:3333/budget-requests';
+
+    if (sessionStorage.getItem('isAdminLoggedIn') !== 'true') {
+        window.location.href = 'login.html';
+    }
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const API_URL = isLocalhost 
+    ? 'http://localhost:3333/budget-requests' 
+    : 'https://sua-api-production.up.railway.app/budget-requests';
 
     async function fetchBudgets() {
       const tableBody = document.getElementById('budget-table-body');
